@@ -2,6 +2,7 @@ import logging
 import traceback
 
 import daft
+
 import taipy
 from taipy.gui import Gui
 
@@ -88,6 +89,13 @@ if __name__ == "__main__":
     logger.addHandler(ch)
 
     logger.debug("starting")
+
+
+    # we are enabling daft to run on Ray
+    # and by default daft will start a ray cluster
+    # though to be fair,
+    # this toy example does not need Ray
+    daft.context.set_runner_ray()
 
     cancer_data = load_data()
     gene_list = populate_gene_list(cancer_data)
