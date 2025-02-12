@@ -67,7 +67,9 @@ def render_chart(state, gene_data):
 
     figure = px.bar(gene_data.to_arrow(),
                     x="Cancer", y=["Not detected", "Low", "Medium", "High"],
-                    title="Expression")
+                    title="Count of expression levels",
+                    labels={'value':'Count'}
+                    )
     
     state.gene_figure = figure
     state.refresh("gene_figure")
