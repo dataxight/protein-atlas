@@ -11,13 +11,18 @@ First, clone this repo
 git clone git@github.com:dataxight/toy-data-web-app
 ```
 
-Then, create the virtual environment with all dependencies.  This is done using Poetry, so make sure you have Poetry installed first
+Next, create the virtual environment with all dependencies.  This is done using Poetry, so make sure you have Poetry installed first
 ```
 pip install poetry
+```
+
+Next, go into the directory where this repo has been cloned, and invoke Poetry to install necessary dependencies
+```
+cd toy-data-web-app
 poetry update
 ```
 
-Then, to run the example
+Finally, to run the example
 ```
 poetry run python src/foo.py
 ```
