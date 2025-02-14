@@ -2,7 +2,9 @@
 
 This is a toy example of a data web application built using a modern data tech stack
 
-- **Github repository**: <https://github.com/dataxight/toy-data-web-app/>
+<img width="1264" alt="toy-data-web-app screenshot" src="https://github.com/user-attachments/assets/c969de90-8439-4878-ac61-9e408f4aa3d9" />
+
+
 
 ## How to use
 
