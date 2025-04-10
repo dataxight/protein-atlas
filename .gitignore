@@ -169,3 +169,10 @@ cython_debug/
 # Emacs
 *~
 *#
+
+# data
+data/*
+
+# dependencies
+poetry.lock
+__pycache__

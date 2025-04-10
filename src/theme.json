@@ -1,0 +1,1125 @@
+{
+    "defaultColorScheme": "light",
+    "breakpoints": {
+        "keys": ["xs", "sm", "md", "lg", "xl"],
+        "values": {
+            "xs": 0,
+            "sm": 600,
+            "md": 900,
+            "lg": 1200,
+            "xl": 1536
+        },
+        "unit": "px"
+    },
+    "direction": "ltr",
+    "components": {
+        "MuiDataGrid": {
+            "styleOverrides": {
+                "root": {
+                    "fontSize": "1rem"
+                },
+                "columnHeader": {
+                    "&:last-of-type": {
+                        "& .MuiDataGrid-columnSeparator": {
+                            "display": "none"
+                        }
+                    }
+                }
+            }
+        },
+        "MuiButton": {
+            "defaultProps": {
+                "disableElevation": true
+            },
+            "variants": [
+                {
+                    "props": {
+                        "size": "xsmall"
+                    },
+                    "style": {
+                        "fontSize": "0.875rem",
+                        "padding": "4px 10px",
+                        "lineHeight": 1.25,
+                        "height": 32
+                    }
+                }
+            ]
+        },
+        "MuiPaper": {
+            "styleOverrides": {
+                "root": {
+                    "backgroundImage": "none"
+                }
+            }
+        }
+    },
+    "shape": {
+        "borderRadius": 8
+    },
+    "typography": {
+        "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+        "h1": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "3rem",
+            "lineHeight": "1",
+            "fontWeight": 300
+        },
+        "h2": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "2.25rem",
+            "lineHeight": "2.5rem",
+            "fontWeight": 300
+        },
+        "h3": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "1.875rem",
+            "lineHeight": "2.25rem",
+            "fontWeight": 400
+        },
+        "h4": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "1.5rem",
+            "lineHeight": "2rem",
+            "fontWeight": 400
+        },
+        "h5": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "1.25rem",
+            "lineHeight": "1.75rem",
+            "fontWeight": 400
+        },
+        "h6": {
+            "fontFamily": "\"Space Grotesk\", sans-serif",
+            "fontSize": "1.125rem",
+            "lineHeight": "1.75rem",
+            "fontWeight": 500
+        },
+        "small": {
+            "fontSize": "0.75rem",
+            "lineHeight": "1rem"
+        },
+        "htmlFontSize": 16,
+        "fontSize": 14,
+        "fontWeightLight": 300,
+        "fontWeightRegular": 400,
+        "fontWeightMedium": 500,
+        "fontWeightBold": 700,
+        "subtitle1": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 400,
+            "fontSize": "1rem",
+            "lineHeight": 1.75
+        },
+        "subtitle2": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 500,
+            "fontSize": "0.875rem",
+            "lineHeight": 1.57
+        },
+        "body1": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 400,
+            "fontSize": "1rem",
+            "lineHeight": 1.5
+        },
+        "body2": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 400,
+            "fontSize": "0.875rem",
+            "lineHeight": 1.43
+        },
+        "button": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 500,
+            "fontSize": "0.875rem",
+            "lineHeight": 1.75,
+            "textTransform": "uppercase"
+        },
+        "caption": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 400,
+            "fontSize": "0.75rem",
+            "lineHeight": 1.66
+        },
+        "overline": {
+            "fontFamily": "\"Nunito Sans\", Inter, sans-serif",
+            "fontWeight": 400,
+            "fontSize": "0.75rem",
+            "lineHeight": 2.66,
+            "textTransform": "uppercase"
+        },
+        "inherit": {
+            "fontFamily": "inherit",
+            "fontWeight": "inherit",
+            "fontSize": "inherit",
+            "lineHeight": "inherit",
+            "letterSpacing": "inherit"
+        }
+    },
+    "unstable_sxConfig": {
+        "border": {
+            "themeKey": "borders"
+        },
+        "borderTop": {
+            "themeKey": "borders"
+        },
+        "borderRight": {
+            "themeKey": "borders"
+        },
+        "borderBottom": {
+            "themeKey": "borders"
+        },
+        "borderLeft": {
+            "themeKey": "borders"
+        },
+        "borderColor": {
+            "themeKey": "palette"
+        },
+        "borderTopColor": {
+            "themeKey": "palette"
+        },
+        "borderRightColor": {
+            "themeKey": "palette"
+        },
+        "borderBottomColor": {
+            "themeKey": "palette"
+        },
+        "borderLeftColor": {
+            "themeKey": "palette"
+        },
+        "outline": {
+            "themeKey": "borders"
+        },
+        "outlineColor": {
+            "themeKey": "palette"
+        },
+        "borderRadius": {
+            "themeKey": "shape.borderRadius"
+        },
+        "color": {
+            "themeKey": "palette"
+        },
+        "bgcolor": {
+            "themeKey": "palette",
+            "cssProperty": "backgroundColor"
+        },
+        "backgroundColor": {
+            "themeKey": "palette"
+        },
+        "p": {},
+        "pt": {},
+        "pr": {},
+        "pb": {},
+        "pl": {},
+        "px": {},
+        "py": {},
+        "padding": {},
+        "paddingTop": {},
+        "paddingRight": {},
+        "paddingBottom": {},
+        "paddingLeft": {},
+        "paddingX": {},
+        "paddingY": {},
+        "paddingInline": {},
+        "paddingInlineStart": {},
+        "paddingInlineEnd": {},
+        "paddingBlock": {},
+        "paddingBlockStart": {},
+        "paddingBlockEnd": {},
+        "m": {},
+        "mt": {},
+        "mr": {},
+        "mb": {},
+        "ml": {},
+        "mx": {},
+        "my": {},
+        "margin": {},
+        "marginTop": {},
+        "marginRight": {},
+        "marginBottom": {},
+        "marginLeft": {},
+        "marginX": {},
+        "marginY": {},
+        "marginInline": {},
+        "marginInlineStart": {},
+        "marginInlineEnd": {},
+        "marginBlock": {},
+        "marginBlockStart": {},
+        "marginBlockEnd": {},
+        "displayPrint": {
+            "cssProperty": false
+        },
+        "display": {},
+        "overflow": {},
+        "textOverflow": {},
+        "visibility": {},
+        "whiteSpace": {},
+        "flexBasis": {},
+        "flexDirection": {},
+        "flexWrap": {},
+        "justifyContent": {},
+        "alignItems": {},
+        "alignContent": {},
+        "order": {},
+        "flex": {},
+        "flexGrow": {},
+        "flexShrink": {},
+        "alignSelf": {},
+        "justifyItems": {},
+        "justifySelf": {},
+        "gap": {},
+        "rowGap": {},
+        "columnGap": {},
+        "gridColumn": {},
+        "gridRow": {},
+        "gridAutoFlow": {},
+        "gridAutoColumns": {},
+        "gridAutoRows": {},
+        "gridTemplateColumns": {},
+        "gridTemplateRows": {},
+        "gridTemplateAreas": {},
+        "gridArea": {},
+        "position": {},
+        "zIndex": {
+            "themeKey": "zIndex"
+        },
+        "top": {},
+        "right": {},
+        "bottom": {},
+        "left": {},
+        "boxShadow": {
+            "themeKey": "shadows"
+        },
+        "width": {},
+        "maxWidth": {},
+        "minWidth": {},
+        "height": {},
+        "maxHeight": {},
+        "minHeight": {},
+        "boxSizing": {},
+        "font": {
+            "themeKey": "font"
+        },
+        "fontFamily": {
+            "themeKey": "typography"
+        },
+        "fontSize": {
+            "themeKey": "typography"
+        },
+        "fontStyle": {
+            "themeKey": "typography"
+        },
+        "fontWeight": {
+            "themeKey": "typography"
+        },
+        "letterSpacing": {},
+        "textTransform": {},
+        "lineHeight": {},
+        "textAlign": {},
+        "typography": {
+            "cssProperty": false,
+            "themeKey": "typography"
+        }
+    },
+    "mixins": {
+        "toolbar": {
+            "minHeight": 56,
+            "@media (min-width:0px)": {
+                "@media (orientation: landscape)": {
+                    "minHeight": 48
+                }
+            },
+            "@media (min-width:600px)": {
+                "minHeight": 64
+            }
+        }
+    },
+    "shadows": [
+        "none",
+        "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+        "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+        "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
+        "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+        "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+        "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+        "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+        "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+        "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+        "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+        "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+        "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+        "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+        "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+        "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+        "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+        "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+        "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+        "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+        "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+        "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+        "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+        "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+        "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)"
+    ],
+    "transitions": {
+        "easing": {
+            "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+            "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+            "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+            "sharp": "cubic-bezier(0.4, 0, 0.6, 1)"
+        },
+        "duration": {
+            "shortest": 150,
+            "shorter": 200,
+            "short": 250,
+            "standard": 300,
+            "complex": 375,
+            "enteringScreen": 225,
+            "leavingScreen": 195
+        }
+    },
+    "zIndex": {
+        "mobileStepper": 1000,
+        "fab": 1050,
+        "speedDial": 1050,
+        "appBar": 1100,
+        "drawer": 1200,
+        "modal": 1300,
+        "snackbar": 1400,
+        "tooltip": 1500
+    },
+    "cssVarPrefix": "dx",
+    "colorSchemeSelector": "class",
+    "rootSelector": ":root",
+    "colorSchemes": {
+        "light": {
+            "palette": {
+                "mode": "light",
+                "primary": {
+                    "main": "#81C24F",
+                    "light": "#f5f5f0",
+                    "dark": "#53BF00",
+                    "contrastText": "rgba(0, 0, 0, 0.87)",
+                    "mainChannel": "129 194 79",
+                    "lightChannel": "245 245 240",
+                    "darkChannel": "83 191 0",
+                    "contrastTextChannel": "0 0 0"
+                },
+                "success": {
+                    "main": "#28A745",
+                    "light": "rgb(83, 184, 106)",
+                    "dark": "rgb(28, 116, 48)",
+                    "contrastText": "#fff",
+                    "mainChannel": "40 167 69",
+                    "lightChannel": "83 184 106",
+                    "darkChannel": "28 116 48",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "grey": {
+                    "50": "#fafafa",
+                    "100": "#F0F0F0",
+                    "200": "#999999",
+                    "300": "#e0e0e0",
+                    "400": "#bdbdbd",
+                    "500": "#363636",
+                    "600": "#797979",
+                    "700": "#585858",
+                    "800": "#282828",
+                    "900": "#222222",
+                    "A100": "#f5f5f5",
+                    "A200": "#eeeeee",
+                    "A400": "#bdbdbd",
+                    "A700": "#616161"
+                },
+                "rustyRed": "#D62246",
+                "jasmine": "#F6E17B",
+                "dimGray": "#666164",
+                "forestGreen": "#152117",
+                "eerieBlack": "#282828",
+                "isabelline": "#F0EFEA",
+                "earthYellow": "#E2A65A",
+                "periwinkle": "#DAC4F7",
+                "secondary": {
+                    "main": "#dbdbdb",
+                    "light": "rgb(226, 226, 226)",
+                    "dark": "rgb(153, 153, 153)",
+                    "contrastText": "rgba(0, 0, 0, 0.87)",
+                    "mainChannel": "219 219 219",
+                    "lightChannel": "226 226 226",
+                    "darkChannel": "153 153 153",
+                    "contrastTextChannel": "0 0 0"
+                },
+                "text": {
+                    "primary": "#152117",
+                    "secondary": "#666666",
+                    "disabled": "rgba(0, 0, 0, 0.38)",
+                    "primaryChannel": "21 33 23",
+                    "secondaryChannel": "102 102 102"
+                },
+                "background": {
+                    "default": "#f1f1ed",
+                    "paper": "#FAFAFA",
+                    "defaultChannel": "#F0F0F0",
+                    "paperChannel": "250 250 250"
+                },
+                "sidebarBackground": "#f5f5f0",
+                "headerBackground": "#f5f5f0",
+                "common": {
+                    "black": "#000",
+                    "white": "#fff",
+                    "background": "#fff",
+                    "onBackground": "#000",
+                    "backgroundChannel": "255 255 255",
+                    "onBackgroundChannel": "0 0 0"
+                },
+                "error": {
+                    "main": "#d32f2f",
+                    "light": "#ef5350",
+                    "dark": "#c62828",
+                    "contrastText": "#fff",
+                    "mainChannel": "211 47 47",
+                    "lightChannel": "239 83 80",
+                    "darkChannel": "198 40 40",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "warning": {
+                    "main": "#ed6c02",
+                    "light": "#ff9800",
+                    "dark": "#e65100",
+                    "contrastText": "#fff",
+                    "mainChannel": "237 108 2",
+                    "lightChannel": "255 152 0",
+                    "darkChannel": "230 81 0",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "info": {
+                    "main": "#0288d1",
+                    "light": "#03a9f4",
+                    "dark": "#01579b",
+                    "contrastText": "#fff",
+                    "mainChannel": "2 136 209",
+                    "lightChannel": "3 169 244",
+                    "darkChannel": "1 87 155",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "contrastThreshold": 3,
+                "tonalOffset": 0.2,
+                "divider": "rgba(0, 0, 0, 0.12)",
+                "action": {
+                    "active": "rgba(0, 0, 0, 0.54)",
+                    "hover": "rgba(0, 0, 0, 0.04)",
+                    "hoverOpacity": 0.04,
+                    "selected": "rgba(0, 0, 0, 0.08)",
+                    "selectedOpacity": 0.08,
+                    "disabled": "rgba(0, 0, 0, 0.26)",
+                    "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                    "disabledOpacity": 0.38,
+                    "focus": "rgba(0, 0, 0, 0.12)",
+                    "focusOpacity": 0.12,
+                    "activatedOpacity": 0.12,
+                    "activeChannel": "0 0 0",
+                    "selectedChannel": "0 0 0"
+                },
+                "Alert": {
+                    "errorColor": "rgb(95, 33, 32)",
+                    "infoColor": "rgb(1, 67, 97)",
+                    "successColor": "rgb(33, 73, 42)",
+                    "warningColor": "rgb(102, 60, 0)",
+                    "errorFilledBg": "#d32f2f",
+                    "infoFilledBg": "#0288d1",
+                    "successFilledBg": "#28A745",
+                    "warningFilledBg": "#ed6c02",
+                    "errorFilledColor": "#fff",
+                    "infoFilledColor": "#fff",
+                    "successFilledColor": "#fff",
+                    "warningFilledColor": "#fff",
+                    "errorStandardBg": "rgb(253, 237, 237)",
+                    "infoStandardBg": "rgb(229, 246, 253)",
+                    "successStandardBg": "rgb(237, 247, 240)",
+                    "warningStandardBg": "rgb(255, 244, 229)",
+                    "errorIconColor": "#d32f2f",
+                    "infoIconColor": "#0288d1",
+                    "successIconColor": "#28A745",
+                    "warningIconColor": "#ed6c02"
+                },
+                "AppBar": {
+                    "defaultBg": "#F0F0F0"
+                },
+                "Avatar": {
+                    "defaultBg": "#bdbdbd"
+                },
+                "Button": {
+                    "inheritContainedBg": "#e0e0e0",
+                    "inheritContainedHoverBg": "#f5f5f5"
+                },
+                "Chip": {
+                    "defaultBorder": "#bdbdbd",
+                    "defaultAvatarColor": "#585858",
+                    "defaultIconColor": "#585858"
+                },
+                "FilledInput": {
+                    "bg": "rgba(0, 0, 0, 0.06)",
+                    "hoverBg": "rgba(0, 0, 0, 0.09)",
+                    "disabledBg": "rgba(0, 0, 0, 0.12)"
+                },
+                "LinearProgress": {
+                    "primaryBg": "rgb(207, 231, 188)",
+                    "secondaryBg": "rgb(241, 241, 241)",
+                    "errorBg": "rgb(238, 175, 175)",
+                    "infoBg": "rgb(158, 209, 237)",
+                    "successBg": "rgb(173, 221, 184)",
+                    "warningBg": "rgb(248, 199, 158)"
+                },
+                "Skeleton": {
+                    "bg": ""
+                },
+                "Slider": {
+                    "primaryTrack": "rgb(207, 231, 188)",
+                    "secondaryTrack": "rgb(241, 241, 241)",
+                    "errorTrack": "rgb(238, 175, 175)",
+                    "infoTrack": "rgb(158, 209, 237)",
+                    "successTrack": "rgb(173, 221, 184)",
+                    "warningTrack": "rgb(248, 199, 158)"
+                },
+                "SnackbarContent": {
+                    "bg": "rgb(48, 48, 47)",
+                    "color": "#fff"
+                },
+                "SpeedDialAction": {
+                    "fabHoverBg": "rgb(212, 212, 212)"
+                },
+                "StepConnector": {
+                    "border": "#bdbdbd"
+                },
+                "StepContent": {
+                    "border": "#bdbdbd"
+                },
+                "Switch": {
+                    "defaultColor": "#fff",
+                    "defaultDisabledColor": "#F0F0F0",
+                    "primaryDisabledColor": "rgb(207, 231, 188)",
+                    "secondaryDisabledColor": "rgb(241, 241, 241)",
+                    "errorDisabledColor": "rgb(238, 175, 175)",
+                    "infoDisabledColor": "rgb(158, 209, 237)",
+                    "successDisabledColor": "rgb(173, 221, 184)",
+                    "warningDisabledColor": "rgb(248, 199, 158)"
+                },
+                "TableCell": {
+                    "border": "rgba(224, 224, 224, 1)"
+                },
+                "Tooltip": {
+                    "bg": "rgba(88, 88, 88, 0.92)"
+                },
+                "dividerChannel": "0 0 0"
+            },
+            "opacity": {
+                "inputPlaceholder": 0.42,
+                "inputUnderline": 0.42,
+                "switchTrackDisabled": 0.12,
+                "switchTrack": 0.38
+            },
+            "overlays": []
+        },
+        "dark": {
+            "palette": {
+                "common": {
+                    "black": "#000",
+                    "white": "#fff",
+                    "background": "#000",
+                    "onBackground": "#fff",
+                    "backgroundChannel": "0 0 0",
+                    "onBackgroundChannel": "255 255 255"
+                },
+                "mode": "dark",
+                "primary": {
+                    "main": "#81C24F",
+                    "light": "#f5f5f0",
+                    "dark": "#53BF00",
+                    "contrastText": "rgba(0, 0, 0, 0.87)",
+                    "mainChannel": "129 194 79",
+                    "lightChannel": "245 245 240",
+                    "darkChannel": "83 191 0",
+                    "contrastTextChannel": "0 0 0"
+                },
+                "secondary": {
+                    "main": "#363636",
+                    "light": "rgb(94, 94, 94)",
+                    "dark": "rgb(37, 37, 37)",
+                    "contrastText": "#fff",
+                    "mainChannel": "54 54 54",
+                    "lightChannel": "94 94 94",
+                    "darkChannel": "37 37 37",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "error": {
+                    "main": "#f44336",
+                    "light": "#e57373",
+                    "dark": "#d32f2f",
+                    "contrastText": "#fff",
+                    "mainChannel": "244 67 54",
+                    "lightChannel": "229 115 115",
+                    "darkChannel": "211 47 47",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "warning": {
+                    "main": "#ffa726",
+                    "light": "#ffb74d",
+                    "dark": "#f57c00",
+                    "contrastText": "rgba(0, 0, 0, 0.87)",
+                    "mainChannel": "255 167 38",
+                    "lightChannel": "255 183 77",
+                    "darkChannel": "245 124 0",
+                    "contrastTextChannel": "0 0 0"
+                },
+                "info": {
+                    "main": "#29b6f6",
+                    "light": "#4fc3f7",
+                    "dark": "#0288d1",
+                    "contrastText": "rgba(0, 0, 0, 0.87)",
+                    "mainChannel": "41 182 246",
+                    "lightChannel": "79 195 247",
+                    "darkChannel": "2 136 209",
+                    "contrastTextChannel": "0 0 0"
+                },
+                "success": {
+                    "main": "#28A745",
+                    "light": "rgb(83, 184, 106)",
+                    "dark": "rgb(28, 116, 48)",
+                    "contrastText": "#fff",
+                    "mainChannel": "40 167 69",
+                    "lightChannel": "83 184 106",
+                    "darkChannel": "28 116 48",
+                    "contrastTextChannel": "255 255 255"
+                },
+                "grey": {
+                    "50": "#fafafa",
+                    "100": "#F0F0F0",
+                    "200": "#999999",
+                    "300": "#e0e0e0",
+                    "400": "#bdbdbd",
+                    "500": "#363636",
+                    "600": "#797979",
+                    "700": "#585858",
+                    "800": "#282828",
+                    "900": "#222222",
+                    "A100": "#f5f5f5",
+                    "A200": "#eeeeee",
+                    "A400": "#bdbdbd",
+                    "A700": "#616161"
+                },
+                "contrastThreshold": 3,
+                "tonalOffset": 0.2,
+                "text": {
+                    "primary": "#FFFFFF",
+                    "secondary": "#999999",
+                    "disabled": "rgba(255, 255, 255, 0.5)",
+                    "icon": "rgba(255, 255, 255, 0.5)",
+                    "primaryChannel": "255 255 255",
+                    "secondaryChannel": "153 153 153"
+                },
+                "divider": "rgba(255, 255, 255, 0.12)",
+                "background": {
+                    "paper": "#282828",
+                    "default": "#363636",
+                    "defaultChannel": "#222222",
+                    "paperChannel": "40 40 40"
+                },
+                "action": {
+                    "active": "#fff",
+                    "hover": "rgba(255, 255, 255, 0.08)",
+                    "hoverOpacity": 0.08,
+                    "selected": "rgba(255, 255, 255, 0.16)",
+                    "selectedOpacity": 0.16,
+                    "disabled": "rgba(255, 255, 255, 0.3)",
+                    "disabledBackground": "rgba(255, 255, 255, 0.12)",
+                    "disabledOpacity": 0.38,
+                    "focus": "rgba(255, 255, 255, 0.12)",
+                    "focusOpacity": 0.12,
+                    "activatedOpacity": 0.24,
+                    "activeChannel": "255 255 255",
+                    "selectedChannel": "255 255 255"
+                },
+                "rustyRed": "#D62246",
+                "jasmine": "#F6E17B",
+                "dimGray": "#666164",
+                "forestGreen": "#152117",
+                "eerieBlack": "#282828",
+                "isabelline": "#F0EFEA",
+                "earthYellow": "#E2A65A",
+                "periwinkle": "#DAC4F7",
+                "sidebarBackground": "#222222",
+                "headerBackground": "#282828",
+                "Alert": {
+                    "errorColor": "rgb(244, 199, 199)",
+                    "infoColor": "rgb(184, 231, 251)",
+                    "successColor": "rgb(186, 226, 195)",
+                    "warningColor": "rgb(255, 226, 183)",
+                    "errorFilledBg": "#d32f2f",
+                    "infoFilledBg": "#0288d1",
+                    "successFilledBg": "rgb(28",
+                    "warningFilledBg": "#f57c00",
+                    "errorFilledColor": "#fff",
+                    "infoFilledColor": "#fff",
+                    "successFilledColor": "#fff",
+                    "warningFilledColor": "rgba(0, 0, 0, 0.87)",
+                    "errorStandardBg": "rgb(22, 11, 11)",
+                    "infoStandardBg": "rgb(7, 19, 24)",
+                    "successStandardBg": "rgb(8, 18, 10)",
+                    "warningStandardBg": "rgb(25, 18, 7)",
+                    "errorIconColor": "#f44336",
+                    "infoIconColor": "#29b6f6",
+                    "successIconColor": "#28A745",
+                    "warningIconColor": "#ffa726"
+                },
+                "AppBar": {
+                    "defaultBg": "#222222",
+                    "darkBg": "#282828",
+                    "darkColor": "#FFFFFF"
+                },
+                "Avatar": {
+                    "defaultBg": "#797979"
+                },
+                "Button": {
+                    "inheritContainedBg": "#282828",
+                    "inheritContainedHoverBg": "#585858"
+                },
+                "Chip": {
+                    "defaultBorder": "#585858",
+                    "defaultAvatarColor": "#e0e0e0",
+                    "defaultIconColor": "#e0e0e0"
+                },
+                "FilledInput": {
+                    "bg": "rgba(255, 255, 255, 0.09)",
+                    "hoverBg": "rgba(255, 255, 255, 0.13)",
+                    "disabledBg": "rgba(255, 255, 255, 0.12)"
+                },
+                "LinearProgress": {
+                    "primaryBg": "rgb(64, 97, 39)",
+                    "secondaryBg": "rgb(27, 27, 27)",
+                    "errorBg": "rgb(122, 33, 27)",
+                    "infoBg": "rgb(20, 91, 123)",
+                    "successBg": "rgb(20, 83, 34)",
+                    "warningBg": "rgb(127, 83, 19)"
+                },
+                "Skeleton": {
+                    "bg": ""
+                },
+                "Slider": {
+                    "primaryTrack": "rgb(64, 97, 39)",
+                    "secondaryTrack": "rgb(27, 27, 27)",
+                    "errorTrack": "rgb(122, 33, 27)",
+                    "infoTrack": "rgb(20, 91, 123)",
+                    "successTrack": "rgb(20, 83, 34)",
+                    "warningTrack": "rgb(127, 83, 19)"
+                },
+                "SnackbarContent": {
+                    "bg": "rgb(250, 250, 250)",
+                    "color": "rgba(0, 0, 0, 0.87)"
+                },
+                "SpeedDialAction": {
+                    "fabHoverBg": "rgb(72, 72, 72)"
+                },
+                "StepConnector": {
+                    "border": "#797979"
+                },
+                "StepContent": {
+                    "border": "#797979"
+                },
+                "Switch": {
+                    "defaultColor": "#e0e0e0",
+                    "defaultDisabledColor": "#797979",
+                    "primaryDisabledColor": "rgb(58, 87, 35)",
+                    "secondaryDisabledColor": "rgb(24, 24, 24)",
+                    "errorDisabledColor": "rgb(109, 30, 24)",
+                    "infoDisabledColor": "rgb(18, 81, 110)",
+                    "successDisabledColor": "rgb(18, 75, 31)",
+                    "warningDisabledColor": "rgb(114, 75, 17)"
+                },
+                "TableCell": {
+                    "border": "rgba(81, 81, 81, 1)"
+                },
+                "Tooltip": {
+                    "bg": "rgba(88, 88, 88, 0.92)"
+                },
+                "dividerChannel": "255 255 255"
+            },
+            "opacity": {
+                "inputPlaceholder": 0.5,
+                "inputUnderline": 0.7,
+                "switchTrackDisabled": 0.2,
+                "switchTrack": 0.3
+            },
+            "overlays": [
+                "none",
+                "linear-gradient(rgba(255 255 255 / 0.051), rgba(255 255 255 / 0.051))",
+                "linear-gradient(rgba(255 255 255 / 0.069), rgba(255 255 255 / 0.069))",
+                "linear-gradient(rgba(255 255 255 / 0.082), rgba(255 255 255 / 0.082))",
+                "linear-gradient(rgba(255 255 255 / 0.092), rgba(255 255 255 / 0.092))",
+                "linear-gradient(rgba(255 255 255 / 0.101), rgba(255 255 255 / 0.101))",
+                "linear-gradient(rgba(255 255 255 / 0.108), rgba(255 255 255 / 0.108))",
+                "linear-gradient(rgba(255 255 255 / 0.114), rgba(255 255 255 / 0.114))",
+                "linear-gradient(rgba(255 255 255 / 0.119), rgba(255 255 255 / 0.119))",
+                "linear-gradient(rgba(255 255 255 / 0.124), rgba(255 255 255 / 0.124))",
+                "linear-gradient(rgba(255 255 255 / 0.128), rgba(255 255 255 / 0.128))",
+                "linear-gradient(rgba(255 255 255 / 0.132), rgba(255 255 255 / 0.132))",
+                "linear-gradient(rgba(255 255 255 / 0.135), rgba(255 255 255 / 0.135))",
+                "linear-gradient(rgba(255 255 255 / 0.139), rgba(255 255 255 / 0.139))",
+                "linear-gradient(rgba(255 255 255 / 0.142), rgba(255 255 255 / 0.142))",
+                "linear-gradient(rgba(255 255 255 / 0.145), rgba(255 255 255 / 0.145))",
+                "linear-gradient(rgba(255 255 255 / 0.147), rgba(255 255 255 / 0.147))",
+                "linear-gradient(rgba(255 255 255 / 0.15), rgba(255 255 255 / 0.15))",
+                "linear-gradient(rgba(255 255 255 / 0.152), rgba(255 255 255 / 0.152))",
+                "linear-gradient(rgba(255 255 255 / 0.155), rgba(255 255 255 / 0.155))",
+                "linear-gradient(rgba(255 255 255 / 0.157), rgba(255 255 255 / 0.157))",
+                "linear-gradient(rgba(255 255 255 / 0.159), rgba(255 255 255 / 0.159))",
+                "linear-gradient(rgba(255 255 255 / 0.161), rgba(255 255 255 / 0.161))",
+                "linear-gradient(rgba(255 255 255 / 0.163), rgba(255 255 255 / 0.163))",
+                "linear-gradient(rgba(255 255 255 / 0.165), rgba(255 255 255 / 0.165))"
+            ]
+        }
+    },
+    "font": {
+        "h1": "300 3rem/1 \"Space Grotesk\", sans-serif",
+        "h2": "300 2.25rem/2.5rem \"Space Grotesk\", sans-serif",
+        "h3": "400 1.875rem/2.25rem \"Space Grotesk\", sans-serif",
+        "h4": "400 1.5rem/2rem \"Space Grotesk\", sans-serif",
+        "h5": "400 1.25rem/1.75rem \"Space Grotesk\", sans-serif",
+        "h6": "500 1.125rem/1.75rem \"Space Grotesk\", sans-serif",
+        "small": "0.75rem/1rem ",
+        "subtitle1": "400 1rem/1.75 \"Nunito Sans\", Inter, sans-serif",
+        "subtitle2": "500 0.875rem/1.57 \"Nunito Sans\", Inter, sans-serif",
+        "body1": "400 1rem/1.5 \"Nunito Sans\", Inter, sans-serif",
+        "body2": "400 0.875rem/1.43 \"Nunito Sans\", Inter, sans-serif",
+        "button": "500 0.875rem/1.75 \"Nunito Sans\", Inter, sans-serif",
+        "caption": "400 0.75rem/1.66 \"Nunito Sans\", Inter, sans-serif",
+        "overline": "400 0.75rem/2.66 \"Nunito Sans\", Inter, sans-serif",
+        "inherit": "inherit inherit/inherit inherit"
+    },
+    "palette": {
+        "mode": "light",
+        "primary": {
+            "main": "#81C24F",
+            "light": "#f5f5f0",
+            "dark": "#53BF00",
+            "contrastText": "rgba(0, 0, 0, 0.87)",
+            "mainChannel": "129 194 79",
+            "lightChannel": "245 245 240",
+            "darkChannel": "83 191 0",
+            "contrastTextChannel": "0 0 0"
+        },
+        "success": {
+            "main": "#28A745",
+            "light": "rgb(83, 184, 106)",
+            "dark": "rgb(28, 116, 48)",
+            "contrastText": "#fff",
+            "mainChannel": "40 167 69",
+            "lightChannel": "83 184 106",
+            "darkChannel": "28 116 48",
+            "contrastTextChannel": "255 255 255"
+        },
+        "grey": {
+            "50": "#fafafa",
+            "100": "#F0F0F0",
+            "200": "#999999",
+            "300": "#e0e0e0",
+            "400": "#bdbdbd",
+            "500": "#363636",
+            "600": "#797979",
+            "700": "#585858",
+            "800": "#282828",
+            "900": "#222222",
+            "A100": "#f5f5f5",
+            "A200": "#eeeeee",
+            "A400": "#bdbdbd",
+            "A700": "#616161"
+        },
+        "rustyRed": "#D62246",
+        "jasmine": "#F6E17B",
+        "dimGray": "#666164",
+        "forestGreen": "#152117",
+        "eerieBlack": "#282828",
+        "isabelline": "#F0EFEA",
+        "earthYellow": "#E2A65A",
+        "periwinkle": "#DAC4F7",
+        "secondary": {
+            "main": "#dbdbdb",
+            "light": "rgb(226, 226, 226)",
+            "dark": "rgb(153, 153, 153)",
+            "contrastText": "rgba(0, 0, 0, 0.87)",
+            "mainChannel": "219 219 219",
+            "lightChannel": "226 226 226",
+            "darkChannel": "153 153 153",
+            "contrastTextChannel": "0 0 0"
+        },
+        "text": {
+            "primary": "#152117",
+            "secondary": "#666666",
+            "disabled": "rgba(0, 0, 0, 0.38)",
+            "primaryChannel": "21 33 23",
+            "secondaryChannel": "102 102 102"
+        },
+        "background": {
+            "default": "#f1f1ed",
+            "paper": "#FAFAFA",
+            "defaultChannel": "#F0F0F0",
+            "paperChannel": "250 250 250"
+        },
+        "sidebarBackground": "#f5f5f0",
+        "headerBackground": "#f5f5f0",
+        "common": {
+            "black": "#000",
+            "white": "#fff",
+            "background": "#fff",
+            "onBackground": "#000",
+            "backgroundChannel": "255 255 255",
+            "onBackgroundChannel": "0 0 0"
+        },
+        "error": {
+            "main": "#d32f2f",
+            "light": "#ef5350",
+            "dark": "#c62828",
+            "contrastText": "#fff",
+            "mainChannel": "211 47 47",
+            "lightChannel": "239 83 80",
+            "darkChannel": "198 40 40",
+            "contrastTextChannel": "255 255 255"
+        },
+        "warning": {
+            "main": "#ed6c02",
+            "light": "#ff9800",
+            "dark": "#e65100",
+            "contrastText": "#fff",
+            "mainChannel": "237 108 2",
+            "lightChannel": "255 152 0",
+            "darkChannel": "230 81 0",
+            "contrastTextChannel": "255 255 255"
+        },
+        "info": {
+            "main": "#0288d1",
+            "light": "#03a9f4",
+            "dark": "#01579b",
+            "contrastText": "#fff",
+            "mainChannel": "2 136 209",
+            "lightChannel": "3 169 244",
+            "darkChannel": "1 87 155",
+            "contrastTextChannel": "255 255 255"
+        },
+        "contrastThreshold": 3,
+        "tonalOffset": 0.2,
+        "divider": "rgba(0, 0, 0, 0.12)",
+        "action": {
+            "active": "rgba(0, 0, 0, 0.54)",
+            "hover": "rgba(0, 0, 0, 0.04)",
+            "hoverOpacity": 0.04,
+            "selected": "rgba(0, 0, 0, 0.08)",
+            "selectedOpacity": 0.08,
+            "disabled": "rgba(0, 0, 0, 0.26)",
+            "disabledBackground": "rgba(0, 0, 0, 0.12)",
+            "disabledOpacity": 0.38,
+            "focus": "rgba(0, 0, 0, 0.12)",
+            "focusOpacity": 0.12,
+            "activatedOpacity": 0.12,
+            "activeChannel": "0 0 0",
+            "selectedChannel": "0 0 0"
+        },
+        "Alert": {
+            "errorColor": "rgb(95, 33, 32)",
+            "infoColor": "rgb(1, 67, 97)",
+            "successColor": "rgb(33, 73, 42)",
+            "warningColor": "rgb(102, 60, 0)",
+            "errorFilledBg": "#d32f2f",
+            "infoFilledBg": "#0288d1",
+            "successFilledBg": "#28A745",
+            "warningFilledBg": "#ed6c02",
+            "errorFilledColor": "#fff",
+            "infoFilledColor": "#fff",
+            "successFilledColor": "#fff",
+            "warningFilledColor": "#fff",
+            "errorStandardBg": "rgb(253, 237, 237)",
+            "infoStandardBg": "rgb(229, 246, 253)",
+            "successStandardBg": "rgb(237, 247, 240)",
+            "warningStandardBg": "rgb(255, 244, 229)",
+            "errorIconColor": "#d32f2f",
+            "infoIconColor": "#0288d1",
+            "successIconColor": "#28A745",
+            "warningIconColor": "#ed6c02"
+        },
+        "AppBar": {
+            "defaultBg": "#F0F0F0"
+        },
+        "Avatar": {
+            "defaultBg": "#bdbdbd"
+        },
+        "Button": {
+            "inheritContainedBg": "#e0e0e0",
+            "inheritContainedHoverBg": "#f5f5f5"
+        },
+        "Chip": {
+            "defaultBorder": "#bdbdbd",
+            "defaultAvatarColor": "#585858",
+            "defaultIconColor": "#585858"
+        },
+        "FilledInput": {
+            "bg": "rgba(0, 0, 0, 0.06)",
+            "hoverBg": "rgba(0, 0, 0, 0.09)",
+            "disabledBg": "rgba(0, 0, 0, 0.12)"
+        },
+        "LinearProgress": {
+            "primaryBg": "rgb(207, 231, 188)",
+            "secondaryBg": "rgb(241, 241, 241)",
+            "errorBg": "rgb(238, 175, 175)",
+            "infoBg": "rgb(158, 209, 237)",
+            "successBg": "rgb(173, 221, 184)",
+            "warningBg": "rgb(248, 199, 158)"
+        },
+        "Skeleton": {
+            "bg": ""
+        },
+        "Slider": {
+            "primaryTrack": "rgb(207, 231, 188)",
+            "secondaryTrack": "rgb(241, 241, 241)",
+            "errorTrack": "rgb(238, 175, 175)",
+            "infoTrack": "rgb(158, 209, 237)",
+            "successTrack": "rgb(173, 221, 184)",
+            "warningTrack": "rgb(248, 199, 158)"
+        },
+        "SnackbarContent": {
+            "bg": "rgb(48, 48, 47)",
+            "color": "#fff"
+        },
+        "SpeedDialAction": {
+            "fabHoverBg": "rgb(212, 212, 212)"
+        },
+        "StepConnector": {
+            "border": "#bdbdbd"
+        },
+        "StepContent": {
+            "border": "#bdbdbd"
+        },
+        "Switch": {
+            "defaultColor": "#fff",
+            "defaultDisabledColor": "#F0F0F0",
+            "primaryDisabledColor": "rgb(207, 231, 188)",
+            "secondaryDisabledColor": "rgb(241, 241, 241)",
+            "errorDisabledColor": "rgb(238, 175, 175)",
+            "infoDisabledColor": "rgb(158, 209, 237)",
+            "successDisabledColor": "rgb(173, 221, 184)",
+            "warningDisabledColor": "rgb(248, 199, 158)"
+        },
+        "TableCell": {
+            "border": "rgba(224, 224, 224, 1)"
+        },
+        "Tooltip": {
+            "bg": "rgba(88, 88, 88, 0.92)"
+        },
+        "dividerChannel": "0 0 0"
+    },
+    "opacity": {
+        "inputPlaceholder": 0.42,
+        "inputUnderline": 0.42,
+        "switchTrackDisabled": 0.12,
+        "switchTrack": 0.38
+    },
+    "overlays": [],
+    "mode": "dark"
+}
