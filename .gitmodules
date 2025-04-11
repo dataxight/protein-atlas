@@ -1,0 +1,3 @@
+[submodule "submodules/ceramist"]
+	path = submodules/ceramist
+	url = git@github-dxt:dataxight/ceramist.git
