@@ -2,18 +2,27 @@ import logging
 import os
 
 import daft
+import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from taipy.gui import Gui, State, invoke_long_callback, navigate, notify
 
+from helpers import get_data_graph, get_dataframe_from_graph_node, read_file
+
+file_path = ""
+# For level 1
+data_graph = None
+table_list = None
+hpa_data = None
+# For level 2
+selected_table = ""
+genes_list = None
+brain_region_list = None
 selected_gene = ""
 selected_brain_region = ""
 heatmap_region_figure = None
 heatmap_gene_figure = None
-file_path = ""
-hpa_data = None
-genes_list = None
-brain_region_list = None
+# For level 3
 progress = 0
 status = 0
 logs = "Not running"
@@ -27,23 +36,36 @@ def reset_attributes_by_level(state, level):
     """
     state_attributes = {
         1: [
-            "progress",
+            # For level 1
+            "data_graph",
+            "table_list",
             "hpa_data",
+            # For level 2
+            "selected_table",
             "genes_list",
             "brain_region_list",
             "selected_gene",
             "selected_brain_region",
             "heatmap_region_figure",
             "heatmap_gene_figure",
-            "logs",
+            # For level 3
+            "progress",
             "status",
+            "logs",
         ],
         2: [
+            # For level 2
+            "selected_table",
+            "genes_list",
+            "brain_region_list",
+            "selected_gene",
+            "selected_brain_region",
+            "heatmap_region_figure",
+            "heatmap_gene_figure",
+            # For level 3
             "progress",
-            "logs",
             "status",
-            # "selected_gene",
-            # "selected_brain_region",
+            "logs",
         ],
         3: [
             "progress",
@@ -59,32 +81,33 @@ def reset_attributes_by_level(state, level):
         setattr(state, attr, globals().get(attr))
 
 
-def read_file(file_path):
-    extension = os.path.splitext(file_path)[1]
-    logger.debug("Reading file: " + file_path)
-
-    if extension == ".csv":
-        return daft.read_csv(file_path)
-    elif extension == ".tsv":
-        return daft.read_csv(file_path, delimiter="\t")
-    elif extension == ".parquet":
-        return daft.read_parquet(file_path)
-    else:
-        raise ValueError(f"Unsupported file format: {extension}")
-
-
 def on_file_input(state) -> daft.DataFrame:
     logger.debug("File input changed to " + state.file_path)
     reset_attributes_by_level(state, 1)
 
-    state.hpa_data = read_file(state.file_path)
+    extension = os.path.splitext(state.file_path)[1]
+    if extension == ".json":
+        state.data_graph = get_data_graph(state.file_path)
+        state.table_list = list(state.data_graph["description"]["tables"].keys())
+    elif extension in [".csv", ".tsv", ".parquet"]:
+        state.hpa_data = read_file(state.file_path)
+        get_list_of_genes_and_brain_regions(state)
+
+
+def on_table_selected(state, var, value):
+    logger.debug("Graph node selection changed to " + value)
+    reset_attributes_by_level(state, 2)
+    state.hpa_data = get_dataframe_from_graph_node(state.data_graph, value)
+    get_list_of_genes_and_brain_regions(state)
+
+
+def get_list_of_genes_and_brain_regions(state):
     state.genes_list = sorted(filter(None, state.hpa_data.select("Gene name").distinct().to_pydict()["Gene name"]))
     state.brain_region_list = sorted(filter(None, state.hpa_data.select("Brain region").distinct().to_pydict()["Brain region"]))
 
 
 def on_gene_selected(state, var, value):
     logger.debug("Gene selection changed to " + value)
-    # reset_attributes_by_level(state, 2)
     state.selected_gene = value
 
     if value == "":
@@ -94,7 +117,6 @@ def on_gene_selected(state, var, value):
 
 def on_region_selected(state, var, value):
     logger.debug("Brain region selection changed to " + value)
-    # reset_attributes_by_level(state, 3)
     state.selected_brain_region = value
 
     if value == "":
@@ -109,7 +131,8 @@ def long_callback_status(state: State, status, result):
             state.logs = "✅ Heatmap generated!"
             state.heatmap_gene_figure, state.heatmap_region_figure = result
             state.progress = 100
-            state.refresh("heatmap_region_figure", "heatmap_gene_figure")
+            state.refresh("heatmap_region_figure")
+            state.refresh("heatmap_gene_figure")
             notify(state, "success", "Chart ready")
         else:
             notify(state, "error", "Something went wrong")
@@ -123,6 +146,14 @@ def render_chart(hpa_data=None, selected_gene="", selected_brain_region=""):
     region_figure = None
     df_filtered = None
     x_label = ["TPM", "pTPM", "nTPM"]
+
+    # Cast all numeric columns at once
+    hpa_data = hpa_data.with_columns(
+        {col: daft.col(col).cast(daft.DataType.float64())
+         for col in x_label
+         if hpa_data.schema()[col].dtype != daft.DataType.float64()}
+    )
+
     if selected_gene != "":
         logger.debug(f"Rendering chart for {selected_gene}")
         df_filtered = hpa_data.filter(daft.col("Gene name") == selected_gene)
@@ -142,7 +173,6 @@ def render_chart(hpa_data=None, selected_gene="", selected_brain_region=""):
         logger.debug(f"Rendering chart for {selected_brain_region}")
         df_filtered = hpa_data.filter(daft.col("Brain region") == selected_brain_region)
         data = df_filtered.exclude("Gene", "Gene name", "Brain region").to_arrow()
-        import numpy as np
         z_log = np.log1p(data)
         y_label = df_filtered.select("Gene name").to_pydict()["Gene name"]
         fig = go.Figure(data=go.Heatmap(
@@ -166,6 +196,7 @@ def render_chart(hpa_data=None, selected_gene="", selected_brain_region=""):
 
 def on_generate_heatmap(state: State):
     logger.debug("Generating heatmap")
+    reset_attributes_by_level(state, 3)
     invoke_long_callback(
         state,
         render_chart,

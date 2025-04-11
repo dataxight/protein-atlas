@@ -1,9 +1,9 @@
 import os
-import daft
 
 import ceramist.data as datalib
 import ceramist.graph as graphlib
 import ceramist.io as iolib
+import daft
 
 
 def read_file(file_path):
@@ -19,13 +19,9 @@ def read_file(file_path):
         raise ValueError(f"Unsupported file format: {extension}")
 
 
-def get_cancer_data_graph_by_cancer(selected_cancer_name: str) -> graphlib.igraph.Graph:
-    selected_cancer_name = selected_cancer_name
+def get_data_graph(file_path: str) -> graphlib.igraph.Graph:
 
-    if selected_cancer_name == "":
-        return None
-
-    filename = "data/" + selected_cancer_name + ".json"
+    filename = file_path
     reader = iolib.ManifestReader()
     graph = reader.load_from_file(filename)
     reader.load_data_for_graph(graph)
