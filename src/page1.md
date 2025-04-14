@@ -4,6 +4,9 @@
 
 # Gene Expression Heatmap Viewer
 
+Transcript expression levels summarized per gene in 13 regions based on samples from the Human Brain Tissue Bank (HBTB; Semmelweis University, Budapest) analysed with RNA-seq on the MGI platform. The tab-separated file includes Ensembl gene identifier, analysed region, transcripts per million ("TPM"), protein-transcripts per million ("pTPM") and normalized expression ("nTPM"). The data is based on The Human Protein Atlas version 24.0 and Ensembl version 109.
+
+
 <||layout|columns=1 1|gap=20px|
 <|
 **Choose your file**: <|{file_path}|file_selector|label={file_path.split("/")[-1] if file_path != "" else "Select manifest file or data file"}|on_action=on_file_input|extensions=.json, .tsv, .csv, .parquet|drop_message=Drop here to upload|>
