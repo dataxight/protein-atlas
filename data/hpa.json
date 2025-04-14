@@ -1,0 +1,16 @@
+{
+    "tables": {
+        "rna_brain_region": {
+            "data format": "parquet",
+            "data url": "./data/rna_brain_region_hpa.parquet",
+            "columns": {
+                "Gene": {},
+                "Gene name": {},
+                "Brain region": {},
+                "TPM": {},
+                "pTPM": {},
+                "nTPM": {}
+            }
+        }
+    }
+}

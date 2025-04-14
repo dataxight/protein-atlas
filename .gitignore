@@ -171,7 +171,8 @@ cython_debug/
 *#
 
 # data
-data/*
+data/*.tsv
+data/*.parquet
 
 # dependencies
 poetry.lock
