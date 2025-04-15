@@ -27,6 +27,9 @@ progress = 0
 status = 0
 logs = "Not running"
 
+
+logger = None
+
 def reset_attributes_by_level(state, level):
     """
     Level of states:
@@ -86,9 +89,26 @@ def on_file_input(state) -> daft.DataFrame:
     reset_attributes_by_level(state, 1)
 
     extension = os.path.splitext(state.file_path)[1]
+    logger.debug("processing extension: "+extension)
     if extension == ".json":
-        state.data_graph = get_data_graph(state.file_path)
-        state.table_list = list(state.data_graph["description"]["tables"].keys())
+        try:
+            data_graph = get_data_graph(state.file_path)
+            if data_graph is None:
+                logger.debug("selected manifest is not a data graph")
+            else:
+                state.data_graph = data_graph
+                tables = list(data_graph["description"]["tables"].keys())
+                if len(tables) == 0:
+                    logger.debug("selected manifest references empty data")
+                else:
+                    logger.debug("selected manifest has tables: " + str(tables))
+                    state.table_list = tables
+        except Exception as e:
+            logger.error("errored: "+str(e))
+            import traceback
+            traceback.print_exception(e)
+
+            
     elif extension in [".csv", ".tsv", ".parquet"]:
         state.hpa_data = read_file(state.file_path)
         get_list_of_genes_and_brain_regions(state)
@@ -216,7 +236,7 @@ def on_menu_option_selected(state, action, info):
 
 
 if __name__ == "__main__":
-    logger = logging.getLogger("champions-oncology")
+    logger = logging.getLogger("human-protein-atlas")
     logger.setLevel(logging.DEBUG)
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     ch = logging.StreamHandler()
