@@ -1,0 +1,16 @@
+{
+    "tables": {
+        "rna_brain_region": {
+            "data format": "tsv",
+            "data url": "./data/rna_brain_region_hpa.tsv",
+            "columns": {
+                "Gene": {},
+                "Gene name": {},
+                "Brain region": {},
+                "TPM": {},
+                "pTPM": {},
+                "nTPM": {}
+            }
+        }
+    }
+}
